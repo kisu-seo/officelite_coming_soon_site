@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import "tailwindcss";
+
+/* === [디자인 시스템 테마 설정] === */
+@theme {
+  /* 브레이크포인트 설정 (모바일 375px, 태블릿 768px, 데스크탑 1024px) */
+  --breakpoint-mobile: 375px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+
+  /* 컬러 시스템 */
+  --color-neutral-900: #25293A;
+  --color-neutral-800: #333950;
+  --color-neutral-500: #747B95;
+  --color-neutral-50: #FAFAFA;
+  --color-neutral-0: #FFFFFF;
+
+  --color-blue-500: #5175FF;
+  --color-blue-300: #829CFF;
+  --color-blue-100: #E4EAFF;
+
+  --color-red-400: #F05B5B;
+
+  /* 간격 시스템 (Spacing) */
+  --spacing-spacing-0: 0px;
+  --spacing-spacing-025: 2px;
+  --spacing-spacing-050: 4px;
+  --spacing-spacing-075: 6px;
+  --spacing-spacing-100: 8px;
+  --spacing-spacing-125: 10px;
+  --spacing-spacing-150: 12px;
+  --spacing-spacing-200: 16px;
+  --spacing-spacing-250: 20px;
+  --spacing-spacing-300: 24px;
+  --spacing-spacing-400: 32px;
+  --spacing-spacing-500: 40px;
+  --spacing-spacing-600: 48px;
+  --spacing-spacing-800: 64px;
+  --spacing-spacing-1000: 80px;
+  --spacing-spacing-1200: 96px;
+  --spacing-spacing-1400: 112px;
+  --spacing-spacing-1600: 128px;
+  --spacing-spacing-1800: 140px;
+
+  /* 모서리 반경 시스템 (Border Radius) */
+  --radius-radius-0: 0px;
+  --radius-radius-4: 4px;
+  --radius-radius-6: 6px;
+  --radius-radius-8: 8px;
+  --radius-radius-10: 10px;
+  --radius-radius-12: 12px;
+  --radius-radius-16: 16px;
+  --radius-radius-20: 20px;
+  --radius-radius-24: 24px;
+  --radius-radius-full: 999px;
+
+  --font-sans: 'Kumbh Sans', sans-serif;
+}
+
+/* === [타이포그래피 프리셋] === */
+.text-preset-1 {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.2;
+  letter-spacing: 0px;
+}
+.text-preset-1-tablet {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0px;
+}
+.text-preset-2 {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: 0px;
+}
+.text-preset-3 {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0px;
+}
+.text-preset-4 {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0px;
+}
+.text-preset-5 {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0px;
+}
+.text-preset-6 {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+/* === [기타 디자인 디테일 및 배경 패턴 설정] === */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body {
+  background-color: var(--color-neutral-50);
+  color: var(--color-neutral-900);
+}
+
+/* === [폼 에러 스타일 & 인풋 포커스] === */
+.input-container.has-error {
+  border-color: var(--color-red-400) !important;
+}
+.input-container.has-error input {
+  color: var(--color-red-400);
+}
+.input-container.has-error input::placeholder {
+  color: var(--color-red-400);
+  opacity: 0.6;
+}
+
+/* === [드롭다운 화살표 애니메이션] === */
+#custom-select-trigger[aria-expanded="true"] img {
+  transform: rotate(180deg);
+}

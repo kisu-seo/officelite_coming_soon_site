@@ -1,53 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Officelite coming soon site</title>
+  <title>Officelite | 간결하고 혁신적인 작업 관리 플랫폼</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <script type="module" src="./src/main.js"></script>
 </head>
-<body> 
-  A simple solution to complex tasks is coming soon
+<body class="relative min-h-screen overflow-x-hidden bg-neutral-50 font-sans text-neutral-900">
 
-  Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new 
-  collaboration platform built with an intuitive interface to improve productivity.
+  <!-- === [배경 패턴 링 (데스크톱/모바일 분할 배치)] === -->
+  <!-- 데스크톱용 우측 상단 거대 링 -->
+  <img src="./assets/home/bg-pattern-header.svg" alt="" class="absolute top-0 right-0 translate-x-[25%] -translate-y-[20%] -z-10 w-[950px] max-w-none hidden desktop:block pointer-events-none" aria-hidden="true">
 
-  Get Started
+  <!-- === [상단 네비게이션 헤더] === -->
+  <header class="relative max-w-[1110px] mx-auto px-spacing-300 pt-spacing-500 pb-spacing-0 desktop:px-0 mb-spacing-1000">
+    <!-- 모바일/태블릿용 로고 뒤 정중앙 링 -->
+    <img src="./assets/home/bg-pattern-header.svg" alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 w-[460px] h-[460px] max-w-none desktop:hidden pointer-events-none" aria-hidden="true">
+    
+    <div class="flex justify-center desktop:justify-start">
+      <a href="./index.html" aria-label="Officelite 홈으로 가기">
+        <img src="./assets/shared/logo.svg" alt="Officelite 로고" class="w-[155px] h-auto">
+      </a>
+    </div>
+  </header>
 
-  Basic
-  Free
-  Up to 5 users for free
-  Basic document collaboration
-  2 gb storage
-  Great security and support
-  Try for Free
+  <main>
+    <!-- === [히어로 섹션] === -->
+    <section class="max-w-[1110px] mx-auto px-spacing-300 pt-spacing-0 pb-spacing-600 tablet:pt-spacing-0 tablet:pb-spacing-800 desktop:px-0 desktop:pt-spacing-0 desktop:pb-spacing-1000">
+      <div class="grid grid-cols-1 gap-spacing-600 desktop:grid-cols-2 desktop:gap-spacing-400 items-center">
+        <!-- 일러스트 영역 (모바일/태블릿에서 상단 노출) -->
+        <div class="flex justify-center order-1 desktop:order-2 w-[200px] h-[224px] mx-auto desktop:mx-0">
+          <img src="./assets/home/illustration-charts.svg" alt="Officelite 작업 대시보드 및 통계 차트 그래픽" class="w-full h-full object-contain drop-shadow-[0px_50px_50px_rgba(75,92,154,0.15)]">
+        </div>
 
-  Pro
-  $9.99
-  Per user, billed monthly
-  All essential integrations
-  50 gb storage
-  More control and insights
-  Try for Free
+        <!-- 텍스트 영역 (모바일/태블릿에서 하단 노출) -->
+        <div class="flex flex-col items-center text-center desktop:items-start desktop:text-left order-2 desktop:order-1 max-w-[540px] mx-auto desktop:mx-0">
+          <h1 class="text-preset-1-tablet desktop:text-preset-1 text-neutral-900 leading-tight mb-spacing-300">
+            A simple solution to complex tasks is coming soon
+          </h1>
+          <p class="text-preset-4 text-neutral-500 mb-spacing-400 max-w-[440px] desktop:max-w-[480px]">
+            Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new collaboration platform built with an intuitive interface to improve productivity.
+          </p>
+          <a href="./sign-up.html" class="inline-block px-spacing-400 py-spacing-200 bg-blue-500 text-neutral-0 text-preset-5 rounded-radius-full shadow-[0px_20px_25px_-5px_rgba(81,117,255,0.4)] hover:bg-blue-300 hover:shadow-[0px_20px_25px_-5px_rgba(130,156,255,0.6)] active:scale-95 transition duration-200" aria-label="서비스 가입 및 시작하기 페이지로 이동">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </section>
 
-  Ultimate
-  $19.99
-  Per user, billed monthly
-  Robust work management
-  100 gb storage
-  VIP support
-  Try for Free
+    <!-- === [가격표 및 요금제 요약 섹션] === -->
+    <section class="max-w-[1110px] mx-auto px-spacing-300 py-spacing-800 tablet:py-spacing-1200 desktop:px-0" aria-label="요금제 소개 및 신청">
+      <div class="grid grid-cols-1 gap-spacing-400 desktop:grid-cols-3 desktop:gap-spacing-300 items-stretch">
+        
+        <!-- Basic 요금제 -->
+        <div class="flex flex-col justify-between items-center text-center bg-neutral-0 p-spacing-500 rounded-radius-12 border border-neutral-100 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.08)] max-w-[450px] w-full mx-auto">
+          <div class="w-full">
+            <h2 class="text-preset-2 text-neutral-900 mb-spacing-500">Basic</h2>
+            <div class="text-[56px] font-bold text-neutral-900 leading-none mb-spacing-100">Free</div>
+            <p class="text-preset-4 text-neutral-500 mb-spacing-600">Up to 5 users for free</p>
+            <ul class="flex flex-col gap-spacing-200 text-preset-4 text-neutral-500 mb-spacing-600 border-t border-neutral-100 pt-spacing-300">
+              <li>Basic document collaboration</li>
+              <li>2 GB storage</li>
+              <li>Great security and support</li>
+            </ul>
+          </div>
+          <a href="./sign-up.html?pack=basic" class="w-full py-spacing-200 bg-blue-100 text-blue-500 text-preset-5 rounded-radius-full hover:bg-blue-300 hover:text-neutral-0 active:scale-95 transition duration-200 text-center" aria-label="Basic 패키지 무료로 시작하기">
+            Try for Free
+          </a>
+        </div>
 
-  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-  Coming 4 Nov 2020
+        <!-- Pro 요금제 (강조 카드) -->
+        <div class="relative overflow-hidden flex flex-col justify-between items-center text-center bg-blue-500 text-neutral-0 p-spacing-500 rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(81,117,255,0.25)] max-w-[450px] w-full mx-auto desktop:scale-105 z-10">
+          <!-- 카드 배경 패턴 -->
+          <img src="./assets/home/bg-pattern-pricing.svg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-15 pointer-events-none" aria-hidden="true">
+          
+          <div class="w-full z-10">
+            <h2 class="text-preset-2 text-neutral-0 mb-spacing-500">Pro</h2>
+            <div class="text-[56px] font-bold text-neutral-0 leading-none mb-spacing-100">$9.99</div>
+            <p class="text-preset-4 text-blue-100 mb-spacing-600">Per user, billed monthly</p>
+            <ul class="flex flex-col gap-spacing-200 text-preset-4 text-blue-100 mb-spacing-600 border-t border-blue-300 pt-spacing-300">
+              <li>All essential integrations</li>
+              <li>50 GB storage</li>
+              <li>More control and insights</li>
+            </ul>
+          </div>
+          <a href="./sign-up.html?pack=pro" class="w-full py-spacing-200 bg-neutral-0 text-blue-500 text-preset-5 rounded-radius-full hover:bg-blue-100 active:scale-95 transition duration-200 text-center z-10 shadow-lg" aria-label="Pro 패키지 무료로 시작하기">
+            Try for Free
+          </a>
+        </div>
 
-  <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-  47 Days
-  07 Hours
-  56 Min
-  14 Sec
-  Get Started
+        <!-- Ultimate 요금제 -->
+        <div class="flex flex-col justify-between items-center text-center bg-neutral-0 p-spacing-500 rounded-radius-12 border border-neutral-100 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.08)] max-w-[450px] w-full mx-auto">
+          <div class="w-full">
+            <h2 class="text-preset-2 text-neutral-900 mb-spacing-500">Ultimate</h2>
+            <div class="text-[56px] font-bold text-neutral-900 leading-none mb-spacing-100">$19.99</div>
+            <p class="text-preset-4 text-neutral-500 mb-spacing-600">Per user, billed monthly</p>
+            <ul class="flex flex-col gap-spacing-200 text-preset-4 text-neutral-500 mb-spacing-600 border-t border-neutral-100 pt-spacing-300">
+              <li>Robust work management</li>
+              <li>100 GB storage</li>
+              <li>VIP support</li>
+            </ul>
+          </div>
+          <a href="./sign-up.html?pack=ultimate" class="w-full py-spacing-200 bg-blue-100 text-blue-500 text-preset-5 rounded-radius-full hover:bg-blue-300 hover:text-neutral-0 active:scale-95 transition duration-200 text-center" aria-label="Ultimate 패키지 무료로 시작하기">
+            Try for Free
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- === [푸터 섹션 - 카운트다운 타이머] === -->
+  <footer class="relative overflow-hidden bg-neutral-800 text-neutral-0 py-spacing-1000 tablet:py-spacing-1200" aria-label="출시 카운트다운 및 등록">
+    <!-- 푸터 배경 패턴 이미지 -->
+    <img src="./assets/home/bg-pattern-footer.svg" alt="" class="absolute top-0 left-1/2 -translate-x-1/2 w-[850px] tablet:w-[1200px] desktop:w-[1400px] max-w-none pointer-events-none" aria-hidden="true">
+
+    <div class="relative z-10 max-w-[1110px] mx-auto px-spacing-300 desktop:px-0 flex flex-col items-center gap-spacing-600 desktop:flex-row desktop:justify-between desktop:items-center">
+      
+      <!-- 카운트다운 영역 -->
+      <div class="flex flex-col items-center desktop:items-start text-center desktop:text-left">
+        <h2 class="text-preset-6 text-neutral-500 tracking-[5px] mb-spacing-250 uppercase font-bold">
+          Coming <span class="target-date-display text-blue-500">4 Nov 2020</span>
+        </h2>
+        
+        <!-- 타이머 박스 그룹 -->
+        <div class="flex gap-spacing-150 tablet:gap-spacing-200 mt-spacing-200">
+          <div class="flex flex-col items-center bg-neutral-900 w-[72px] h-[92px] tablet:w-[100px] tablet:h-[128px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-lg">
+            <span class="timer-days text-[32px] tablet:text-[56px] font-bold leading-none mb-spacing-050">47</span>
+            <span class="text-[12px] tablet:text-preset-6 text-neutral-500 font-bold tracking-widest">days</span>
+          </div>
+          <div class="flex flex-col items-center bg-neutral-900 w-[72px] h-[92px] tablet:w-[100px] tablet:h-[128px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-lg">
+            <span class="timer-hours text-[32px] tablet:text-[56px] font-bold leading-none mb-spacing-050">07</span>
+            <span class="text-[12px] tablet:text-preset-6 text-neutral-500 font-bold tracking-widest">hours</span>
+          </div>
+          <div class="flex flex-col items-center bg-neutral-900 w-[72px] h-[92px] tablet:w-[100px] tablet:h-[128px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-lg">
+            <span class="timer-mins text-[32px] tablet:text-[56px] font-bold leading-none mb-spacing-050">56</span>
+            <span class="text-[12px] tablet:text-preset-6 text-neutral-500 font-bold tracking-widest">min</span>
+          </div>
+          <div class="flex flex-col items-center bg-neutral-900 w-[72px] h-[92px] tablet:w-[100px] tablet:h-[128px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-lg">
+            <span class="timer-secs text-[32px] tablet:text-[56px] font-bold leading-none mb-spacing-050">14</span>
+            <span class="text-[12px] tablet:text-preset-6 text-neutral-500 font-bold tracking-widest">sec</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 우측 가입 링크 버튼 -->
+      <div>
+        <a href="./sign-up.html" class="inline-block px-spacing-500 py-spacing-200 bg-blue-500 text-neutral-0 text-preset-5 rounded-radius-full shadow-[0px_20px_25px_-5px_rgba(81,117,255,0.4)] hover:bg-blue-300 hover:shadow-[0px_20px_25px_-5px_rgba(130,156,255,0.6)] active:scale-95 transition duration-200" aria-label="가입 페이지로 이동하여 리스트에 등록하기">
+          Get Started
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
 </body>
 </html>
