@@ -58,49 +58,49 @@
 }
 
 /* === [타이포그래피 프리셋] === */
-.text-preset-1 {
+@utility text-preset-1 {
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.2;
   letter-spacing: 0px;
 }
-.text-preset-1-tablet {
+@utility text-preset-1-tablet {
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 700;
   font-size: 40px;
   line-height: 1.2;
   letter-spacing: 0px;
 }
-.text-preset-2 {
+@utility text-preset-2 {
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.4;
   letter-spacing: 0px;
 }
-.text-preset-3 {
+@utility text-preset-3 {
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
   letter-spacing: 0px;
 }
-.text-preset-4 {
+@utility text-preset-4 {
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0px;
 }
-.text-preset-5 {
+@utility text-preset-5 {
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0px;
 }
-.text-preset-6 {
+@utility text-preset-6 {
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -112,7 +112,7 @@
 /* === [기타 디자인 디테일 및 배경 패턴 설정] === */
 html, body {
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 body {
   background-color: var(--color-neutral-50);

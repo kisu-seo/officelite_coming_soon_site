@@ -20,13 +20,13 @@
 
   <!-- === [상단 네비게이션 헤더] === -->
   <header
-    class="relative max-w-[1110px] mx-auto px-spacing-300 pt-spacing-500 pb-spacing-0 desktop:px-0 mb-spacing-1000">
+    class="relative max-w-[1110px] mx-auto px-spacing-300 pt-spacing-500 pb-spacing-0 tablet:pt-spacing-1000 tablet:pl-spacing-500 tablet:pr-spacing-0 tablet:mb-spacing-1400 desktop:px-0 desktop:mb-spacing-1000 mb-spacing-1000">
     <!-- 모바일/태블릿용 로고 뒤 정중앙 링 -->
     <img src="./assets/home/bg-pattern-header.svg" alt=""
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 w-[460px] h-[460px] max-w-none desktop:hidden pointer-events-none"
+      class="absolute top-1/2 tablet:top-[150px] left-1/2 tablet:left-[710px] -translate-x-1/2 -translate-y-1/2 -z-10 w-[460px] h-[460px] tablet:w-[666px] tablet:h-[666px] max-w-none desktop:hidden pointer-events-none"
       aria-hidden="true">
 
-    <div class="flex justify-center desktop:justify-start">
+    <div class="flex justify-center tablet:justify-start">
       <a href="./index.html" aria-label="Officelite 홈으로 가기">
         <img src="./assets/shared/logo.svg" alt="Officelite 로고" class="w-[155px] h-auto">
       </a>
@@ -36,21 +36,22 @@
   <main>
     <!-- === [히어로 섹션] === -->
     <section
-      class="max-w-[1110px] mx-auto px-spacing-200 pt-spacing-0 pb-spacing-500 desktop:px-0 desktop:pt-spacing-0">
-      <div class="grid grid-cols-1 gap-spacing-600 desktop:grid-cols-2 desktop:gap-spacing-400 items-center">
-        <!-- 일러스트 영역 (모바일/태블릿에서 상단 노출) -->
-        <div class="flex justify-center order-1 desktop:order-2">
+      class="max-w-[1110px] mx-auto px-spacing-200 pt-spacing-0 pb-spacing-500 tablet:px-[42px] tablet:pb-spacing-1400 desktop:px-0 desktop:pb-spacing-500 desktop:pt-spacing-0">
+      <div class="grid grid-cols-1 gap-spacing-600 tablet:grid-cols-2 tablet:gap-spacing-400 items-center">
+        <!-- 일러스트 영역 (모바일에서 상단 노출, 태블릿부터 우측 배치) -->
+        <div class="flex justify-center tablet:justify-end desktop:justify-center order-1 tablet:order-2">
           <img src="./assets/home/illustration-charts.svg" alt="Officelite 작업 대시보드 및 통계 차트 그래픽"
-            class="w-[200px] h-full object-contain">
+            class="w-[200px] tablet:w-[280px] desktop:w-[475px] h-full object-contain">
         </div>
 
-        <!-- 텍스트 영역 (모바일/태블릿에서 하단 노출) -->
+        <!-- 텍스트 영역 (모바일에서 하단 노출, 태블릿부터 좌측 배치 및 왼쪽 정렬) -->
         <div
-          class="flex flex-col items-center text-center desktop:items-start desktop:text-left order-2 desktop:order-1 max-w-[540px] mx-auto desktop:mx-0">
+          class="flex flex-col items-center text-center tablet:items-start tablet:text-left order-2 tablet:order-1 tablet:w-[345px] desktop:w-auto max-w-[540px] mx-auto tablet:mx-0">
           <h1 class="text-preset-1-tablet desktop:text-preset-1 text-neutral-800 leading-tight mb-spacing-300">
             A simple solution to complex tasks is coming soon
           </h1>
-          <p class="text-preset-4 text-neutral-500 mb-spacing-300 max-w-[440px] desktop:max-w-[480px]">
+          <p
+            class="text-preset-4 text-neutral-500 mb-spacing-300 max-w-[440px] tablet:max-w-[400px] desktop:max-w-[480px]">
             Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new
             collaboration platform built with an intuitive interface to improve productivity.
           </p>
@@ -65,7 +66,7 @@
   </main>
 
   <!-- === [가격표 및 푸터 전체 배경 wrapper] === -->
-  <div class="relative overflow-x-hidden">
+  <div class="relative overflow-clip">
     <!-- 푸터/가격표 배경 패턴 이미지 -->
     <img src="./assets/home/bg-pattern-footer.svg" alt=""
       class="absolute top-[77%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-[850px] tablet:w-[1200px] desktop:w-[1400px] max-w-none pointer-events-none"
@@ -73,28 +74,43 @@
 
     <!-- === [가격표 및 요금제 요약 섹션] === -->
     <section
-      class="relative overflow-hidden max-w-[1110px] mx-auto px-spacing-200 pt-spacing-500 pb-spacing-0 desktop:px-0"
+      class="relative overflow-clip max-w-[1110px] mx-auto px-spacing-200 pt-spacing-500 pb-spacing-0 tablet:py-0 tablet:px-spacing-500 desktop:px-0 desktop:pt-spacing-500 desktop:pb-0"
       aria-label="요금제 소개 및 신청">
-      <!-- 하단 50%만 덮는 절대 배치 어두운 배경 -->
-      <div class="absolute top-[730px] bottom-0 left-0 right-0 bg-neutral-900 -z-10" aria-hidden="true"></div>
+      <!-- 하단 50%만 덮는 절대 배치 어두운 배경 (태블릿 수직 스택 시 시작 지점 조정) -->
+      <div
+        class="absolute top-[730px] tablet:top-[480px] desktop:top-[730px] h-[5000px] left-0 right-0 bg-neutral-900 -z-10"
+        aria-hidden="true"></div>
 
-      <div class="grid grid-cols-1 gap-spacing-300 desktop:grid-cols-3 items-stretch">
+      <div
+        class="grid grid-cols-1 gap-spacing-300 tablet:gap-spacing-250 desktop:gap-spacing-300 desktop:grid-cols-3 items-stretch">
 
         <!-- Basic 요금제 -->
         <div
-          class="flex flex-col justify-between items-center text-center bg-neutral-0 py-spacing-500 px-spacing-300 rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.24)] max-w-[450px] w-full mx-auto">
-          <div class="w-full">
+          class="flex flex-col tablet:grid tablet:grid-cols-2 tablet:gap-x-0 desktop:flex desktop:flex-col justify-between items-center tablet:items-center desktop:items-center text-center tablet:text-left desktop:text-center bg-neutral-0 py-spacing-500 px-spacing-300 tablet:py-spacing-600 tablet:px-spacing-600 rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.24)] max-w-[450px] tablet:max-w-[689px] desktop:max-w-[350px] w-full mx-auto">
+          <!-- 좌측 정보 영역 -->
+          <div
+            class="flex flex-col items-center tablet:items-start desktop:items-center w-full tablet:w-auto desktop:w-full">
             <h2 class="text-preset-2 text-neutral-900 mb-spacing-200">Basic</h2>
             <div class="text-[56px] font-bold text-neutral-900 leading-none mb-spacing-100">Free</div>
-            <p class="text-preset-4 text-neutral-900 mb-spacing-600">Up to 5 users for free</p>
-            <ul class="flex flex-col gap-spacing-200 text-preset-4 text-neutral-500 mb-spacing-600">
-              <li>Basic document collaboration</li>
-              <li>2 GB storage</li>
-              <li>Great security and support</li>
-            </ul>
+            <p class="text-preset-4 text-neutral-900 mb-spacing-600 tablet:mb-spacing-300 desktop:mb-spacing-600">Up to
+              5 users for free</p>
+            <!-- 태블릿 전용 가입 버튼 -->
+            <a href="./sign-up.html?pack=basic"
+              class="hidden tablet:inline-flex desktop:hidden justify-center items-center w-[170px] h-[50px] bg-blue-100 text-blue-500 text-preset-5 rounded-radius-full hover:bg-blue-300 hover:text-neutral-0 active:scale-95 transition duration-200"
+              aria-label="Basic 패키지 무료로 시작하기">
+              Try for Free
+            </a>
           </div>
+          <!-- 우측 혜택 리스트 영역 -->
+          <ul
+            class="flex flex-col gap-spacing-200 text-preset-4 text-neutral-500 mb-spacing-600 tablet:mb-0 desktop:mb-spacing-600 w-full tablet:w-[240px] tablet:justify-self-end desktop:w-full tablet:items-start desktop:items-center">
+            <li class="w-full">Basic document collaboration</li>
+            <li class="w-full">2 GB storage</li>
+            <li class="w-full">Great security and support</li>
+          </ul>
+          <!-- 모바일 & 데스크톱 전용 가입 버튼 -->
           <a href="./sign-up.html?pack=basic"
-            class="inline-flex justify-center items-center w-[170px] h-[50px] bg-blue-100 text-blue-500 text-preset-5 rounded-radius-full hover:bg-blue-300 hover:text-neutral-0 active:scale-95 transition duration-200"
+            class="inline-flex tablet:hidden desktop:inline-flex justify-center items-center w-[170px] h-[50px] bg-blue-100 text-blue-500 text-preset-5 rounded-radius-full hover:bg-blue-300 hover:text-neutral-0 active:scale-95 transition duration-200"
             aria-label="Basic 패키지 무료로 시작하기">
             Try for Free
           </a>
@@ -102,23 +118,35 @@
 
         <!-- Pro 요금제 (강조 카드) -->
         <div
-          class="relative overflow-hidden flex flex-col justify-between items-center text-center bg-blue-500 text-neutral-0 py-spacing-600 px-spacing-400 rounded-radius-12 shadow-[0px_50px_50px_0px_rgba(75,92,154,0.2472)] max-w-[450px] w-full mx-auto desktop:scale-105 z-10">
+          class="relative overflow-clip flex flex-col tablet:grid tablet:grid-cols-2 tablet:gap-x-0 desktop:flex desktop:flex-col justify-between items-center tablet:items-center desktop:items-center text-center tablet:text-left desktop:text-center bg-blue-500 text-neutral-0 py-spacing-600 px-spacing-400 tablet:px-spacing-600 rounded-radius-12 shadow-[0px_50px_50px_0px_rgba(75,92,154,0.2472)] max-w-[450px] tablet:max-w-[689px] desktop:max-w-[350px] w-full mx-auto desktop:scale-105 z-10">
           <!-- 카드 배경 패턴 -->
           <img src="./assets/home/bg-pattern-pricing.svg" alt=""
-            class="absolute inset-0 w-full h-full object-cover opacity-15 pointer-events-none" aria-hidden="true">
-
-          <div class="w-full z-10">
+            class="absolute inset-0 z-0 tablet:top-[-280px] tablet:left-[-330px] tablet:bottom-auto tablet:right-auto tablet:mx-0 tablet:my-0 desktop:mx-0 desktop:my-0 w-full h-full tablet:w-[880px] tablet:h-[880px] desktop:w-full desktop:h-full tablet:max-w-none object-cover opacity-15 tablet:opacity-100 desktop:opacity-15 pointer-events-none"
+            aria-hidden="true">
+          <!-- 좌측 정보 영역 -->
+          <div
+            class="flex flex-col items-center tablet:items-start desktop:items-center w-full tablet:w-auto desktop:w-full z-10">
             <h2 class="text-preset-2 text-neutral-0 mb-spacing-200">Pro</h2>
             <div class="text-preset-1 text-neutral-0 mb-spacing-100">$9.99</div>
-            <p class="text-preset-4 text-neutral-0 mb-spacing-600">Per user, billed monthly</p>
-            <ul class="flex flex-col gap-spacing-200 text-preset-4 text-neutral-0 mb-spacing-600">
-              <li>All essential integrations</li>
-              <li>50 GB storage</li>
-              <li>More control and insights</li>
-            </ul>
+            <p class="text-preset-4 text-neutral-0 mb-spacing-600 tablet:mb-spacing-300 desktop:mb-spacing-600">Per
+              user, billed monthly</p>
+            <!-- 태블릿 전용 가입 버튼 -->
+            <a href="./sign-up.html?pack=pro"
+              class="hidden tablet:inline-flex desktop:hidden justify-center items-center w-[170px] h-[50px] bg-neutral-0 text-blue-500 text-preset-5 rounded-radius-full hover:bg-blue-100 active:scale-95 transition duration-200 z-10"
+              aria-label="Pro 패키지 무료로 시작하기">
+              Try for Free
+            </a>
           </div>
+          <!-- 우측 혜택 리스트 영역 -->
+          <ul
+            class="flex flex-col gap-spacing-200 text-preset-4 text-neutral-0 mb-spacing-600 tablet:mb-0 desktop:mb-spacing-600 w-full tablet:w-[240px] tablet:justify-self-end desktop:w-full tablet:items-start desktop:items-center z-10">
+            <li class="w-full">All essential integrations</li>
+            <li class="w-full">50 GB storage</li>
+            <li class="w-full">More control and insights</li>
+          </ul>
+          <!-- 모바일 & 데스크톱 전용 가입 버튼 -->
           <a href="./sign-up.html?pack=pro"
-            class="inline-flex justify-center items-center w-[170px] h-[50px] bg-neutral-0 text-blue-500 text-preset-5 rounded-radius-full hover:bg-blue-100 active:scale-95 transition duration-200 z-10"
+            class="inline-flex tablet:hidden desktop:inline-flex justify-center items-center w-[170px] h-[50px] bg-neutral-0 text-blue-500 text-preset-5 rounded-radius-full hover:bg-blue-100 active:scale-95 transition duration-200 z-10"
             aria-label="Pro 패키지 무료로 시작하기">
             Try for Free
           </a>
@@ -126,19 +154,31 @@
 
         <!-- Ultimate 요금제 -->
         <div
-          class="flex flex-col justify-between items-center text-center bg-neutral-0 py-spacing-500 px-spacing-300 rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.24)] max-w-[450px] w-full mx-auto">
-          <div class="w-full">
+          class="flex flex-col tablet:grid tablet:grid-cols-2 tablet:gap-x-0 desktop:flex desktop:flex-col justify-between items-center tablet:items-center desktop:items-center text-center tablet:text-left desktop:text-center bg-neutral-0 py-spacing-500 px-spacing-300 tablet:py-spacing-600 tablet:px-spacing-600 rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.24)] max-w-[450px] tablet:max-w-[689px] desktop:max-w-[350px] w-full mx-auto">
+          <!-- 좌측 정보 영역 -->
+          <div
+            class="flex flex-col items-center tablet:items-start desktop:items-center w-full tablet:w-auto desktop:w-full">
             <h2 class="text-preset-2 text-neutral-900 mb-spacing-200">Ultimate</h2>
             <div class="text-[56px] font-bold text-neutral-900 leading-none mb-spacing-100">$19.99</div>
-            <p class="text-preset-4 text-neutral-900 mb-spacing-600">Per user, billed monthly</p>
-            <ul class="flex flex-col gap-spacing-200 text-preset-4 text-neutral-500 mb-spacing-600">
-              <li>Robust work management</li>
-              <li>100 GB storage</li>
-              <li>VIP support</li>
-            </ul>
+            <p class="text-preset-4 text-neutral-900 mb-spacing-600 tablet:mb-spacing-300 desktop:mb-spacing-600">Per
+              user, billed monthly</p>
+            <!-- 태블릿 전용 가입 버튼 -->
+            <a href="./sign-up.html?pack=ultimate"
+              class="hidden tablet:inline-flex desktop:hidden justify-center items-center w-[170px] h-[50px] bg-blue-100 text-blue-500 text-preset-5 rounded-radius-full hover:bg-blue-300 hover:text-neutral-0 active:scale-95 transition duration-200"
+              aria-label="Ultimate 패키지 무료로 시작하기">
+              Try for Free
+            </a>
           </div>
+          <!-- 우측 혜택 리스트 영역 -->
+          <ul
+            class="flex flex-col gap-spacing-200 text-preset-4 text-neutral-500 mb-spacing-600 tablet:mb-0 desktop:mb-spacing-600 w-full tablet:w-[240px] tablet:justify-self-end desktop:w-full tablet:items-start desktop:items-center">
+            <li class="w-full">Robust work management</li>
+            <li class="w-full">100 GB storage</li>
+            <li class="w-full">VIP support</li>
+          </ul>
+          <!-- 모바일 & 데스크톱 전용 가입 버튼 -->
           <a href="./sign-up.html?pack=ultimate"
-            class="inline-flex justify-center items-center w-[170px] h-[50px] bg-blue-100 text-blue-500 text-preset-5 rounded-radius-full hover:bg-blue-300 hover:text-neutral-0 active:scale-95 transition duration-200"
+            class="inline-flex tablet:hidden desktop:inline-flex justify-center items-center w-[170px] h-[50px] bg-blue-100 text-blue-500 text-preset-5 rounded-radius-full hover:bg-blue-300 hover:text-neutral-0 active:scale-95 transition duration-200"
             aria-label="Ultimate 패키지 무료로 시작하기">
             Try for Free
           </a>
@@ -150,7 +190,7 @@
     <!-- === [푸터 공유 배경 wrapper] === -->
     <div class="bg-neutral-900">
       <!-- === [푸터 섹션 - 카운트다운 타이머] === -->
-      <footer class="relative overflow-hidden text-neutral-0 py-spacing-1000 tablet:py-spacing-1200"
+      <footer class="relative overflow-hidden text-neutral-0 py-spacing-1000 tablet:pt-spacing-1200 tablet:pb-[130px]"
         aria-label="출시 카운트다운 및 등록">
         <div
           class="relative z-10 max-w-[1110px] mx-auto px-spacing-300 desktop:px-0 flex flex-col items-center gap-spacing-600 desktop:flex-row desktop:justify-between desktop:items-center">
@@ -164,23 +204,27 @@
             <!-- 타이머 박스 그룹 -->
             <div class="flex gap-spacing-200 mt-spacing-0">
               <div
-                class="flex flex-col items-center bg-neutral-800 w-[74px] h-[110px] justify-center rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
-                <span class="timer-days text-preset-1-tablet text-neutral-0 mb-spacing-050">47</span>
+                class="flex flex-col items-center bg-neutral-800 w-[74px] tablet:w-[100px] h-[110px] tablet:h-[129px] justify-center rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
+                <span
+                  class="timer-days text-preset-1-tablet tablet:text-preset-1 text-neutral-0 mb-spacing-050">47</span>
                 <span class="text-preset-5 text-neutral-0/50">days</span>
               </div>
               <div
-                class="flex flex-col items-center bg-neutral-800 w-[74px] h-[110px] justify-center rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
-                <span class="timer-hours text-preset-1-tablet text-neutral-0 mb-spacing-050">07</span>
+                class="flex flex-col items-center bg-neutral-800 w-[74px] tablet:w-[100px] h-[110px] tablet:h-[129px] justify-center rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
+                <span
+                  class="timer-hours text-preset-1-tablet tablet:text-preset-1 text-neutral-0 mb-spacing-050">07</span>
                 <span class="text-preset-5 text-neutral-0/50">hours</span>
               </div>
               <div
-                class="flex flex-col items-center bg-neutral-800 w-[74px] h-[110px] justify-center rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
-                <span class="timer-mins text-preset-1-tablet text-neutral-0 mb-spacing-050">56</span>
+                class="flex flex-col items-center bg-neutral-800 w-[74px] tablet:w-[100px] h-[110px] tablet:h-[129px] justify-center rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
+                <span
+                  class="timer-mins text-preset-1-tablet tablet:text-preset-1 text-neutral-0 mb-spacing-050">56</span>
                 <span class="text-preset-5 text-neutral-0/50">min</span>
               </div>
               <div
-                class="flex flex-col items-center bg-neutral-800 w-[74px] h-[110px] justify-center rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
-                <span class="timer-secs text-preset-1-tablet text-neutral-0 mb-spacing-050">14</span>
+                class="flex flex-col items-center bg-neutral-800 w-[74px] tablet:w-[100px] h-[110px] tablet:h-[129px] justify-center rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
+                <span
+                  class="timer-secs text-preset-1-tablet tablet:text-preset-1 text-neutral-0 mb-spacing-050">14</span>
                 <span class="text-preset-5 text-neutral-0/50">sec</span>
               </div>
             </div>

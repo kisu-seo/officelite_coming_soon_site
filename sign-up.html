@@ -23,8 +23,8 @@
   </div>
 
   <!-- === [상단 네비게이션 헤더] === -->
-  <header class="relative max-w-[1110px] w-full mx-auto px-spacing-300 pt-spacing-400 pb-spacing-0 desktop:px-0 flex-shrink-0 mb-spacing-1000">
-    <div class="flex justify-center desktop:justify-start">
+  <header class="relative max-w-[1110px] w-full mx-auto px-spacing-300 tablet:pl-[40px] pt-spacing-400 tablet:pt-[64px] pb-spacing-0 desktop:px-0 flex-shrink-0 mb-spacing-1000">
+    <div class="flex justify-center tablet:justify-start desktop:justify-start">
       <a href="./index.html" aria-label="Officelite 홈으로 가기">
         <img src="./assets/shared/logo.svg" alt="Officelite 로고" class="w-[155px] h-auto">
       </a>
@@ -32,7 +32,7 @@
   </header>
 
   <!-- === [컨텐츠 메인 영역] === -->
-  <main class="flex-grow w-full max-w-[1110px] mx-auto px-0 flex items-center pt-spacing-0 pb-[82px]">
+  <main class="flex-grow w-full max-w-[1110px] mx-auto px-0 flex items-center pt-spacing-0 pb-[82px] tablet:pb-[119px]">
     <div class="grid grid-cols-1 gap-spacing-1000 desktop:grid-cols-12 desktop:gap-spacing-1000 items-center w-full">
       
       <!-- 좌측 타이머 및 정보 영역 (데스크탑 6칸 차지) -->
@@ -50,20 +50,20 @@
             Coming <span class="target-date-display text-blue-500">4 Nov 2020</span>
           </h2>
           <div class="flex gap-spacing-200 mt-spacing-0">
-            <div class="flex flex-col items-center bg-blue-100 w-[71px] h-[110px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
-              <span class="timer-days text-preset-1-tablet text-blue-500 mb-spacing-050">47</span>
+            <div class="flex flex-col items-center bg-blue-100 w-[71px] tablet:w-[100px] h-[110px] tablet:h-[129px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
+              <span class="timer-days text-preset-1-tablet tablet:text-preset-1 text-blue-500 mb-spacing-050">47</span>
               <span class="text-preset-5 text-neutral-800/50">days</span>
             </div>
-            <div class="flex flex-col items-center bg-blue-100 w-[71px] h-[110px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
-              <span class="timer-hours text-preset-1-tablet text-blue-500 mb-spacing-050">07</span>
+            <div class="flex flex-col items-center bg-blue-100 w-[71px] tablet:w-[100px] h-[110px] tablet:h-[129px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
+              <span class="timer-hours text-preset-1-tablet tablet:text-preset-1 text-blue-500 mb-spacing-050">07</span>
               <span class="text-preset-5 text-neutral-800/50">hours</span>
             </div>
-            <div class="flex flex-col items-center bg-blue-100 w-[71px] h-[110px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
-              <span class="timer-mins text-preset-1-tablet text-blue-500 mb-spacing-050">56</span>
+            <div class="flex flex-col items-center bg-blue-100 w-[71px] tablet:w-[100px] h-[110px] tablet:h-[129px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
+              <span class="timer-mins text-preset-1-tablet tablet:text-preset-1 text-blue-500 mb-spacing-050">56</span>
               <span class="text-preset-5 text-neutral-800/50">min</span>
             </div>
-            <div class="flex flex-col items-center bg-blue-100 w-[71px] h-[110px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
-              <span class="timer-secs text-preset-1-tablet text-blue-500 mb-spacing-050">14</span>
+            <div class="flex flex-col items-center bg-blue-100 w-[71px] tablet:w-[100px] h-[110px] tablet:h-[129px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
+              <span class="timer-secs text-preset-1-tablet tablet:text-preset-1 text-blue-500 mb-spacing-050">14</span>
               <span class="text-preset-5 text-neutral-800/50">sec</span>
             </div>
           </div>
@@ -72,13 +72,13 @@
 
       <!-- 우측 가입 폼 카드 영역 (데스크탑 6칸 차지) -->
       <div class="desktop:col-span-6 flex justify-center desktop:justify-end w-full px-spacing-300 desktop:px-0">
-        <div class="bg-neutral-0 py-spacing-500 px-spacing-250 rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.16)] max-w-[540px] w-full z-10">
+        <div class="bg-neutral-0 py-spacing-500 px-spacing-250 tablet:p-[40px] rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.16)] max-w-[540px] w-full tablet:w-[445px] z-10">
           <form id="signup-form" novalidate class="flex flex-col gap-spacing-300">
             
             <!-- 이름 필드 -->
             <div class="input-container relative flex flex-col border-b border-neutral-500/50 focus-within:border-blue-500 transition-colors pt-0 pl-spacing-200 pb-spacing-200">
               <label for="name" class="sr-only">이름</label>
-              <input type="text" id="name" name="name" placeholder="Name" class="w-full bg-transparent text-preset-4 text-neutral-900 placeholder-neutral-500 focus:outline-none py-spacing-075 pr-spacing-400" required aria-invalid="false">
+              <input type="text" id="name" name="name" placeholder="Name" class="w-full bg-transparent text-preset-4 text-neutral-900 placeholder-neutral-500/70 desktop:placeholder-neutral-500 focus:outline-none p-0 desktop:py-spacing-075 desktop:pr-spacing-400" required aria-invalid="false">
               <!-- 에러 아이콘 -->
               <img src="./assets/sign-up/icon-cross.svg" alt="입력 오류" class="error-icon absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 hidden">
               <!-- 에러 메시지 -->
@@ -88,7 +88,7 @@
             <!-- 이메일 필드 -->
             <div class="input-container relative flex flex-col border-b border-neutral-500/50 focus-within:border-blue-500 transition-colors pt-0 pl-spacing-200 pb-spacing-200 mt-0">
               <label for="email" class="sr-only">이메일 주소</label>
-              <input type="email" id="email" name="email" placeholder="Email Address" class="w-full bg-transparent text-preset-4 text-neutral-900 placeholder-neutral-500 focus:outline-none py-spacing-075 pr-spacing-400" required aria-invalid="false">
+              <input type="email" id="email" name="email" placeholder="Email Address" class="w-full bg-transparent text-preset-4 text-neutral-900 placeholder-neutral-500/70 desktop:placeholder-neutral-500 focus:outline-none p-0 desktop:py-spacing-075 desktop:pr-spacing-400" required aria-invalid="false">
               <!-- 에러 아이콘 -->
               <img src="./assets/sign-up/icon-cross.svg" alt="입력 오류" class="error-icon absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 hidden">
               <!-- 에러 메시지 -->
@@ -104,7 +104,7 @@
               <button type="button" id="custom-select-trigger" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="pack-label" class="w-full flex justify-between items-center text-left focus:outline-none p-0">
                 <span class="flex gap-spacing-100 items-baseline">
                   <span class="selected-text text-preset-5 text-neutral-800 font-bold">Basic Pack</span>
-                  <span class="selected-price text-preset-4 text-neutral-500">Free</span>
+                  <span class="selected-price text-preset-5 text-neutral-800/40 desktop:text-preset-4 desktop:text-neutral-500">Free</span>
                 </span>
                 <img src="./assets/sign-up/icon-arrow-down.svg" alt="드롭다운 메뉴 열기" class="w-[11px] h-[5px] transition-transform duration-200">
               </button>
@@ -138,13 +138,13 @@
             <!-- 전화번호 필드 (옵션) -->
             <div class="input-container relative flex flex-col border-b border-neutral-500/50 focus-within:border-blue-500 transition-colors pt-0 pl-spacing-200 pb-spacing-200 mt-0">
               <label for="phone" class="sr-only">전화번호</label>
-              <input type="tel" id="phone" name="phone" placeholder="Phone Number" class="w-full bg-transparent text-preset-4 text-neutral-900 placeholder-neutral-500 focus:outline-none p-0">
+              <input type="tel" id="phone" name="phone" placeholder="Phone Number" class="w-full bg-transparent text-preset-4 text-neutral-900 placeholder-neutral-500/70 desktop:placeholder-neutral-500 focus:outline-none p-0">
             </div>
 
             <!-- 회사 필드 (옵션) -->
             <div class="input-container relative flex flex-col border-b border-neutral-500/50 focus-within:border-blue-500 transition-colors pt-0 pl-spacing-200 pb-spacing-200 mt-0 mb-0">
               <label for="company" class="sr-only">회사명</label>
-              <input type="text" id="company" name="company" placeholder="Company" class="w-full bg-transparent text-preset-4 text-neutral-900 placeholder-neutral-500 focus:outline-none p-0">
+              <input type="text" id="company" name="company" placeholder="Company" class="w-full bg-transparent text-preset-4 text-neutral-900 placeholder-neutral-500/70 desktop:placeholder-neutral-500 focus:outline-none p-0">
             </div>
 
             <!-- 제출 버튼 -->
