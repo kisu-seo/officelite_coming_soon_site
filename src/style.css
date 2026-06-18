@@ -151,5 +151,9 @@ body {
   .pricing-split-bg {
     height: 300px; /* 데스크탑 배경 높이 */
   }
+  .desktop-pricing-card-fixed {
+    width: 350px !important;
+    height: 489px !important;
+  }
 }
 
