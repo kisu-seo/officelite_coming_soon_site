@@ -113,6 +113,8 @@
 html, body {
   max-width: 100%;
   overflow-x: clip;
+  margin: 0;
+  padding: 0;
 }
 body {
   background-color: var(--color-neutral-50);
@@ -135,3 +137,19 @@ body {
 #custom-select-trigger[aria-expanded="true"] img {
   transform: rotate(180deg);
 }
+
+/* === [가격표 배경 분할 커스텀 설정] === */
+.pricing-split-bg {
+  height: 730px; /* 모바일 배경 높이 */
+}
+@media (min-width: 768px) {
+  .pricing-split-bg {
+    height: 480px; /* 태블릿 배경 높이 */
+  }
+}
+@media (min-width: 1024px) {
+  .pricing-split-bg {
+    height: 300px; /* 데스크탑 배경 높이 */
+  }
+}
+
