@@ -192,22 +192,11 @@ signupForm.addEventListener('submit', (e) => {
 
   // 유효할 경우 성공 메시지 표시
   if (valid) {
-    const successModal = document.getElementById('success-modal');
-    if (successModal) {
-      successModal.classList.remove('hidden');
-      signupForm.reset();
-      initSelectedPack();
-    }
+    alert("성공적으로 등록되었습니다!");
+    signupForm.reset();
+    initSelectedPack();
   }
 });
-
-// 성공 모달 닫기
-const closeModalBtn = document.getElementById('close-modal-btn');
-if (closeModalBtn) {
-  closeModalBtn.addEventListener('click', () => {
-    document.getElementById('success-modal').classList.add('hidden');
-  });
-}
 
 // 초기화 호출
 initSelectedPack();
