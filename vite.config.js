@@ -3,6 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { resolve } from 'path';
 
 export default defineConfig({
+  base: '/officelite_coming_soon_site/',
   plugins: [
     tailwindcss(),
   ],
