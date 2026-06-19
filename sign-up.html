@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,38 +11,49 @@
   <script type="module" src="./src/main.js"></script>
   <script type="module" src="./src/signup.js"></script>
 </head>
-<body class="relative min-h-screen overflow-x-hidden bg-neutral-50 font-sans text-neutral-900 flex flex-col justify-between">
+
+<body
+  class="relative min-h-screen overflow-x-hidden bg-neutral-50 font-sans text-neutral-900 flex flex-col">
 
   <!-- === [배경 디자인 설정] === -->
   <!-- 모바일/태블릿 하단 어두운 배경 영역 -->
-  <div class="absolute bottom-0 left-0 right-0 h-[320px] tablet:h-[380px] -z-20 bg-neutral-900 desktop:hidden overflow-hidden" aria-hidden="true">
-    <img src="./assets/sign-up/bg-pattern-side.svg" alt="" class="absolute bottom-0 right-0 w-full h-[320px] tablet:h-[380px] object-cover pointer-events-none">
+  <div
+    class="absolute bottom-0 left-0 right-0 h-[320px] tablet:h-[380px] -z-20 bg-neutral-900 desktop:hidden overflow-hidden"
+    aria-hidden="true">
+    <img src="./assets/sign-up/bg-pattern-side.svg" alt=""
+      class="absolute bottom-0 right-0 w-full h-[320px] tablet:h-[380px] object-cover pointer-events-none">
   </div>
   <!-- 데스크탑 우측 어두운 배경 영역 -->
-  <div class="absolute top-0 right-0 bottom-0 w-[30%] -z-20 bg-neutral-800 hidden desktop:block overflow-hidden" aria-hidden="true">
-    <img src="./assets/sign-up/bg-pattern-side.svg" alt="" class="absolute top-1/2 -translate-y-1/2 right-0 w-[400px] h-[800px] object-contain opacity-25 pointer-events-none">
+  <div class="absolute top-0 right-0 bottom-0 w-[30%] -z-20 bg-neutral-900 hidden desktop:block overflow-hidden"
+    aria-hidden="true">
+    <img src="./assets/sign-up/bg-pattern-side.svg" alt=""
+      class="absolute top-[-420px] right-[-520px] w-[1440px] h-[1440px] max-w-none pointer-events-none">
   </div>
 
   <!-- === [상단 네비게이션 헤더] === -->
-  <header class="relative max-w-[1110px] w-full mx-auto px-spacing-300 tablet:pl-[40px] pt-spacing-400 tablet:pt-[64px] pb-spacing-0 desktop:px-0 flex-shrink-0 mb-spacing-1000">
+  <header
+    class="relative max-w-[1110px] w-full mx-auto px-spacing-300 tablet:pl-[40px] pt-spacing-400 tablet:pt-[64px] pb-spacing-0 desktop:px-0 desktop:pt-[80px] desktop:ml-[105.5px] desktop:mb-[140px] flex-shrink-0 mb-spacing-1000">
     <div class="flex justify-center tablet:justify-start desktop:justify-start">
-      <a href="./index.html" aria-label="Officelite 홈으로 가기">
+      <a href="./index.html" class="desktop:focus:outline-none" aria-label="Officelite 홈으로 가기">
         <img src="./assets/shared/logo.svg" alt="Officelite 로고" class="w-[155px] h-auto">
       </a>
     </div>
   </header>
 
   <!-- === [컨텐츠 메인 영역] === -->
-  <main class="flex-grow w-full max-w-[1110px] mx-auto px-0 flex items-center pt-spacing-0 pb-[82px] tablet:pb-[119px]">
+  <main
+    class="flex-grow w-full max-w-[1110px] mx-auto px-0 flex items-center pt-spacing-0 pb-[82px] tablet:pb-[119px] desktop:h-[489px] desktop:flex-none desktop:mb-0 desktop:pb-0">
     <div class="grid grid-cols-1 gap-spacing-1000 desktop:grid-cols-12 desktop:gap-spacing-1000 items-center w-full">
-      
+
       <!-- 좌측 타이머 및 정보 영역 (데스크탑 6칸 차지) -->
-      <div class="desktop:col-span-6 flex flex-col items-center text-center desktop:items-start desktop:text-left max-w-[540px] mx-auto desktop:mx-0 px-spacing-200 desktop:px-0">
+      <div
+        class="desktop:col-span-6 flex flex-col items-center text-center desktop:items-start desktop:text-left max-w-[540px] mx-auto desktop:mx-0 px-spacing-200 desktop:px-0 desktop:w-[540px]">
         <h1 class="text-preset-1-tablet desktop:text-preset-1 text-neutral-800 leading-tight mb-spacing-300">
           Work smarter. Save time.
         </h1>
         <p class="text-preset-3 text-neutral-500 mb-spacing-500 max-w-[480px]">
-          Easily manage your projects. Get on the list and receive in-app perks available only to early subscribers. We are moving into final development and getting ready for official launch soon.
+          Easily manage your projects. Get on the list and receive in-app perks available only to early subscribers. We
+          are moving into final development and getting ready for official launch soon.
         </p>
 
         <!-- 카운트다운 컴포넌트 -->
@@ -50,19 +62,23 @@
             Coming <span class="target-date-display text-blue-500">4 Nov 2020</span>
           </h2>
           <div class="flex gap-spacing-200 mt-spacing-0">
-            <div class="flex flex-col items-center bg-blue-100 w-[71px] tablet:w-[100px] h-[110px] tablet:h-[129px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
+            <div
+              class="flex flex-col items-center bg-blue-100 w-[71px] tablet:w-[100px] h-[110px] tablet:h-[129px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
               <span class="timer-days text-preset-1-tablet tablet:text-preset-1 text-blue-500 mb-spacing-050">47</span>
               <span class="text-preset-5 text-neutral-800/50">days</span>
             </div>
-            <div class="flex flex-col items-center bg-blue-100 w-[71px] tablet:w-[100px] h-[110px] tablet:h-[129px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
+            <div
+              class="flex flex-col items-center bg-blue-100 w-[71px] tablet:w-[100px] h-[110px] tablet:h-[129px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
               <span class="timer-hours text-preset-1-tablet tablet:text-preset-1 text-blue-500 mb-spacing-050">07</span>
               <span class="text-preset-5 text-neutral-800/50">hours</span>
             </div>
-            <div class="flex flex-col items-center bg-blue-100 w-[71px] tablet:w-[100px] h-[110px] tablet:h-[129px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
+            <div
+              class="flex flex-col items-center bg-blue-100 w-[71px] tablet:w-[100px] h-[110px] tablet:h-[129px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
               <span class="timer-mins text-preset-1-tablet tablet:text-preset-1 text-blue-500 mb-spacing-050">56</span>
               <span class="text-preset-5 text-neutral-800/50">min</span>
             </div>
-            <div class="flex flex-col items-center bg-blue-100 w-[71px] tablet:w-[100px] h-[110px] tablet:h-[129px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
+            <div
+              class="flex flex-col items-center bg-blue-100 w-[71px] tablet:w-[100px] h-[110px] tablet:h-[129px] justify-center rounded-radius-8 tablet:rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.2472)]">
               <span class="timer-secs text-preset-1-tablet tablet:text-preset-1 text-blue-500 mb-spacing-050">14</span>
               <span class="text-preset-5 text-neutral-800/50">sec</span>
             </div>
@@ -72,60 +88,79 @@
 
       <!-- 우측 가입 폼 카드 영역 (데스크탑 6칸 차지) -->
       <div class="desktop:col-span-6 flex justify-center desktop:justify-end w-full px-spacing-300 desktop:px-0">
-        <div class="bg-neutral-0 py-spacing-500 px-spacing-250 tablet:p-[40px] rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.16)] max-w-[540px] w-full tablet:w-[445px] z-10">
-          <form id="signup-form" novalidate class="flex flex-col gap-spacing-300">
-            
+        <div
+          class="bg-neutral-0 py-spacing-500 px-spacing-250 tablet:p-[40px] rounded-radius-12 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.16)] max-w-[540px] w-full tablet:w-[445px] z-10 desktop:h-[489px]">
+          <form id="signup-form" novalidate class="flex flex-col gap-spacing-300 desktop:cursor-pointer">
+
             <!-- 이름 필드 -->
-            <div class="input-container relative flex flex-col border-b border-neutral-500/50 focus-within:border-blue-500 transition-colors pt-0 pl-spacing-200 pb-spacing-200">
+            <div
+              class="input-container relative flex flex-col border-b border-neutral-500/50 desktop:focus-within:border-blue-500 desktop:hover:border-blue-500 transition-colors pt-0 pl-spacing-200 pb-spacing-200">
               <label for="name" class="sr-only">이름</label>
-              <input type="text" id="name" name="name" placeholder="Name" class="w-full bg-transparent text-preset-4 text-neutral-900 placeholder-neutral-500/70 desktop:placeholder-neutral-500 focus:outline-none p-0 desktop:py-spacing-075 desktop:pr-spacing-400" required aria-invalid="false">
+              <input type="text" id="name" name="name" placeholder="Name"
+                class="w-full bg-transparent text-preset-4 text-neutral-900 placeholder-neutral-500/70 desktop:placeholder-neutral-500 focus:outline-none p-0 desktop:py-spacing-075 desktop:pr-spacing-400"
+                required aria-invalid="false">
               <!-- 에러 아이콘 -->
-              <img src="./assets/sign-up/icon-cross.svg" alt="입력 오류" class="error-icon absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 hidden">
+              <img src="./assets/sign-up/icon-cross.svg" alt="입력 오류"
+                class="error-icon absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 hidden">
               <!-- 에러 메시지 -->
-              <span class="error-message text-[12px] text-red-400 absolute right-0 -bottom-[22px] hidden font-bold"></span>
+              <span
+                class="error-message text-[12px] text-red-400 absolute right-0 -bottom-[22px] hidden font-bold"></span>
             </div>
 
             <!-- 이메일 필드 -->
-            <div class="input-container relative flex flex-col border-b border-neutral-500/50 focus-within:border-blue-500 transition-colors pt-0 pl-spacing-200 pb-spacing-200 mt-0">
+            <div
+              class="input-container relative flex flex-col border-b border-neutral-500/50 desktop:focus-within:border-blue-500 desktop:hover:border-blue-500 transition-colors pt-0 pl-spacing-200 pb-spacing-200 mt-0">
               <label for="email" class="sr-only">이메일 주소</label>
-              <input type="email" id="email" name="email" placeholder="Email Address" class="w-full bg-transparent text-preset-4 text-neutral-900 placeholder-neutral-500/70 desktop:placeholder-neutral-500 focus:outline-none p-0 desktop:py-spacing-075 desktop:pr-spacing-400" required aria-invalid="false">
+              <input type="email" id="email" name="email" placeholder="Email Address"
+                class="w-full bg-transparent text-preset-4 text-neutral-900 placeholder-neutral-500/70 desktop:placeholder-neutral-500 focus:outline-none p-0 desktop:py-spacing-075 desktop:pr-spacing-400"
+                required aria-invalid="false">
               <!-- 에러 아이콘 -->
-              <img src="./assets/sign-up/icon-cross.svg" alt="입력 오류" class="error-icon absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 hidden">
+              <img src="./assets/sign-up/icon-cross.svg" alt="입력 오류"
+                class="error-icon absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 hidden">
               <!-- 에러 메시지 -->
-              <span class="error-message text-[12px] text-red-400 absolute right-0 -bottom-[22px] hidden font-bold"></span>
+              <span
+                class="error-message text-[12px] text-red-400 absolute right-0 -bottom-[22px] hidden font-bold"></span>
             </div>
 
             <!-- 커스텀 셀렉트 패키지 필드 -->
-            <div class="relative flex flex-col border-b border-neutral-500/50 pt-0 pl-spacing-200 pb-spacing-200 mt-0">
+            <div class="relative flex flex-col border-b border-neutral-500/50 desktop:hover:border-blue-500 transition-colors pt-0 pl-spacing-200 pb-spacing-200 mt-0">
               <label id="pack-label" class="sr-only">선택 요금제</label>
               <input type="hidden" id="hidden-pack-input" name="pack" value="basic">
-              
+
               <!-- 드롭다운 트리거 버튼 -->
-              <button type="button" id="custom-select-trigger" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="pack-label" class="w-full flex justify-between items-center text-left focus:outline-none p-0">
+              <button type="button" id="custom-select-trigger" aria-haspopup="listbox" aria-expanded="false"
+                aria-labelledby="pack-label"
+                class="w-full flex justify-between items-center text-left focus:outline-none p-0">
                 <span class="flex gap-spacing-100 items-baseline">
                   <span class="selected-text text-preset-5 text-neutral-800 font-bold">Basic Pack</span>
-                  <span class="selected-price text-preset-5 text-neutral-800/40 desktop:text-preset-4 desktop:text-neutral-500">Free</span>
+                  <span
+                    class="selected-price text-preset-5 text-neutral-800/40 desktop:text-preset-4 desktop:text-neutral-500">Free</span>
                 </span>
-                <img src="./assets/sign-up/icon-arrow-down.svg" alt="드롭다운 메뉴 열기" class="w-[11px] h-[5px] transition-transform duration-200">
+                <img src="./assets/sign-up/icon-arrow-down.svg" alt="드롭다운 메뉴 열기"
+                  class="w-[11px] h-[5px] transition-transform duration-200">
               </button>
-              
+
               <!-- 커스텀 드롭다운 리스트 -->
-              <ul id="custom-select-options" role="listbox" aria-labelledby="pack-label" class="absolute left-0 right-0 top-[110%] mt-spacing-100 bg-neutral-0 rounded-radius-8 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.3)] border border-neutral-100 py-spacing-100 hidden z-30">
-                <li role="option" data-value="basic" tabindex="0" class="select-option flex justify-between items-center px-spacing-300 py-spacing-200 hover:bg-blue-100/30 cursor-pointer transition focus:outline-none">
+              <ul id="custom-select-options" role="listbox" aria-labelledby="pack-label"
+                class="absolute left-0 right-0 top-[110%] mt-spacing-100 bg-neutral-0 rounded-radius-8 shadow-[0px_50px_50px_-25px_rgba(75,92,154,0.3)] border border-neutral-100 py-spacing-100 hidden z-30">
+                <li role="option" data-value="basic" tabindex="0"
+                  class="select-option flex justify-between items-center px-spacing-300 py-spacing-200 desktop:hover:bg-blue-100/30 cursor-pointer transition desktop:focus:outline-none">
                   <span class="flex gap-spacing-100 items-baseline">
                     <span class="option-text text-preset-5 font-bold">Basic Pack</span>
                     <span class="option-price text-preset-4 text-neutral-500">Free</span>
                   </span>
                   <img src="./assets/sign-up/icon-check.svg" alt="선택됨" class="check-icon w-3 h-3 hidden">
                 </li>
-                <li role="option" data-value="pro" tabindex="0" class="select-option flex justify-between items-center px-spacing-300 py-spacing-200 hover:bg-blue-100/30 cursor-pointer transition focus:outline-none">
+                <li role="option" data-value="pro" tabindex="0"
+                  class="select-option flex justify-between items-center px-spacing-300 py-spacing-200 desktop:hover:bg-blue-100/30 cursor-pointer transition desktop:focus:outline-none">
                   <span class="flex gap-spacing-100 items-baseline">
                     <span class="option-text text-preset-5 font-bold">Pro Pack</span>
                     <span class="option-price text-preset-4 text-neutral-500">$9.99</span>
                   </span>
                   <img src="./assets/sign-up/icon-check.svg" alt="선택됨" class="check-icon w-3 h-3 hidden">
                 </li>
-                <li role="option" data-value="ultimate" tabindex="0" class="select-option flex justify-between items-center px-spacing-300 py-spacing-200 hover:bg-blue-100/30 cursor-pointer transition focus:outline-none">
+                <li role="option" data-value="ultimate" tabindex="0"
+                  class="select-option flex justify-between items-center px-spacing-300 py-spacing-200 desktop:hover:bg-blue-100/30 cursor-pointer transition desktop:focus:outline-none">
                   <span class="flex gap-spacing-100 items-baseline">
                     <span class="option-text text-preset-5 font-bold">Ultimate Pack</span>
                     <span class="option-price text-preset-4 text-neutral-500">$19.99</span>
@@ -136,19 +171,24 @@
             </div>
 
             <!-- 전화번호 필드 (옵션) -->
-            <div class="input-container relative flex flex-col border-b border-neutral-500/50 focus-within:border-blue-500 transition-colors pt-0 pl-spacing-200 pb-spacing-200 mt-0">
+            <div
+              class="input-container relative flex flex-col border-b border-neutral-500/50 desktop:focus-within:border-blue-500 desktop:hover:border-blue-500 transition-colors pt-0 pl-spacing-200 pb-spacing-200 mt-0">
               <label for="phone" class="sr-only">전화번호</label>
-              <input type="tel" id="phone" name="phone" placeholder="Phone Number" class="w-full bg-transparent text-preset-4 text-neutral-900 placeholder-neutral-500/70 desktop:placeholder-neutral-500 focus:outline-none p-0">
+              <input type="tel" id="phone" name="phone" placeholder="Phone Number"
+                class="w-full bg-transparent text-preset-4 text-neutral-900 placeholder-neutral-500/70 desktop:placeholder-neutral-500 focus:outline-none p-0">
             </div>
 
             <!-- 회사 필드 (옵션) -->
-            <div class="input-container relative flex flex-col border-b border-neutral-500/50 focus-within:border-blue-500 transition-colors pt-0 pl-spacing-200 pb-spacing-200 mt-0 mb-0">
+            <div
+              class="input-container relative flex flex-col border-b border-neutral-500/50 desktop:focus-within:border-blue-500 desktop:hover:border-blue-500 transition-colors pt-0 pl-spacing-200 pb-spacing-200 mt-0 mb-0">
               <label for="company" class="sr-only">회사명</label>
-              <input type="text" id="company" name="company" placeholder="Company" class="w-full bg-transparent text-preset-4 text-neutral-900 placeholder-neutral-500/70 desktop:placeholder-neutral-500 focus:outline-none p-0">
+              <input type="text" id="company" name="company" placeholder="Company"
+                class="w-full bg-transparent text-preset-4 text-neutral-900 placeholder-neutral-500/70 desktop:placeholder-neutral-500 focus:outline-none p-0">
             </div>
 
             <!-- 제출 버튼 -->
-            <button type="submit" class="w-full h-[50px] py-0 flex items-center justify-center bg-blue-500 text-neutral-0 text-preset-5 font-bold rounded-radius-full shadow-[0px_25px_25px_-10px_rgba(63,91,194,0.2427)] hover:bg-blue-300 hover:shadow-[0px_20px_25px_-5px_rgba(130,156,255,0.6)] active:scale-95 transition duration-200 text-center mt-spacing-200 cursor-pointer">
+            <button type="submit"
+              class="w-full h-[50px] py-0 flex items-center justify-center bg-blue-500 text-neutral-0 text-preset-5 font-bold rounded-radius-full shadow-[0px_25px_25px_-10px_rgba(63,91,194,0.2427)] desktop:hover:bg-blue-300 desktop:hover:shadow-[0px_25px_25px_-10px_rgba(63,91,194,0.2472)] desktop:focus:outline-none active:scale-95 transition duration-200 text-center mt-spacing-200 cursor-pointer">
               Get on the list
             </button>
           </form>
@@ -163,4 +203,5 @@
 
 
 </body>
+
 </html>
