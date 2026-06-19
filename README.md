@@ -13,7 +13,7 @@
 
 ### Screenshot
 
-![Project Screenshot](./officelite_coming_soon_site.jpg)
+![Project Screenshot](./officelite_coming_soon_site.png)
 
 ### Links
 
